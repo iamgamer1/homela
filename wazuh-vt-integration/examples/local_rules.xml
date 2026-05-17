@@ -1,0 +1,12 @@
+<!-- Example local_rules.xml snippet that calls vt_lookup active-response command when a file hash is present.
+Important: adjust the <if_sid> or rule matching to fit your alerts (this is an illustrative example).
+-->
+<group name="vt_integration">
+  <rule id="100100" level="3">
+    <if_matched_sid>540</if_matched_sid>
+    <description>Perform VirusTotal lookup for file hash</description>
+    <options>no_full_log</options>
+    <command>vt_lookup</command>
+    <command_arg>$(sha256)</command_arg>
+  </rule>
+</group>

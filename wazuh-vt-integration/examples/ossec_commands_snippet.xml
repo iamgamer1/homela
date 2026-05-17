@@ -1,0 +1,6 @@
+<!-- Snippet to add to <commands> section in /var/ossec/etc/ossec.conf -->
+<command>
+  <name>vt_lookup</name>
+  <executable>active-response/bin/vt_lookup.py</executable>
+  <timeout_allowed>no</timeout_allowed>
+</command>
